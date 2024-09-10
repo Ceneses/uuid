@@ -88,7 +88,8 @@ export default function Home() {
                 </div>
             </div>
             <div className={"p-4 bg-slate-200/20 rounded-md"}>
-                {list.map(k => (<p>{k}</p>))}
+                {list && list.map(k => (<p>{k}</p>))}
+                {list.length === 0 && <span>暂无数据</span>}
             </div>
         </div>
     );
